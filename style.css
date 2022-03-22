@@ -1,0 +1,101 @@
+.nes-container.is-rounded.with-title > .title {
+  margin-top: -2rem;
+}
+
+body {
+  background-color: #fff;
+}
+
+body.is-dark {
+  background-color: #212529;
+}
+
+p.is-dark {
+  color: #fff;
+}
+
+.nes-container.is-rounded.with-title.is-dark > .title {
+  margin-top: -1.6rem;
+}
+
+.nav {
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  width: 100%;
+  text-align: right;
+}
+
+#day-night {
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 256px;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+p.construction {
+  margin: 15vh 0 20px;
+}
+
+p.loading::before {
+  content: "▉▉▉▉▉▉▉";
+}
+
+p.loading::after {
+  content: "▉";
+  animation: blinker 1.2s cubic-bezier(0, 1, 0, 1) infinite;
+}
+
+.construction.nes-container {
+  height: 48px;
+}
+
+.construction > p.title {
+  margin-bottom: 0 !important;
+}
+
+.construction.nes-container.is-dark {
+  height: 64px;
+}
+
+.footer {
+  position: fixed;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  min-width: 324px;
+  text-align: center;
+}
+
+.footer button {
+  padding: 0;
+}
+
+@media (min-width: 432px) {
+  .content {
+    width: 424px;
+  }
+
+  p.loading::before {
+    content: "▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉";
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .content {
+    width: 73.612vw;
+  }
+}

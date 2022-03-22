@@ -2,32 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>👋🌎</title>
+    <title>Tea Time</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <style>
-      body {
-        font-family: "Press Start 2P", cursive;
-      }
-      .nes-container.is-rounded.with-title.title {
-        margin-top: -2rem;
-      }
-      .container {
-        max-width: 980px;
-        margin: 0 auto;
-        margin-top: 150px;
-      }
-    </style>
+    <link href="style.css" rel="stylesheet" />
+    <script src="main.js"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="nes-container with-title is-rounded">
+  <body class="themed">
+    <section class="nav">
+      <button
+        type="button"
+        id="day-night"
+        class="nes-btn"
+        onclick="applyTheme(true)"
+      ></button>
+    </section>
+    <section class="content">
+      <div class="nes-container with-title is-rounded themed">
         <p class="title">Player 1</p>
         <p>Hello World!</p>
       </div>
-    </div>
+
+      <p class="themed construction">Website under construction</p>
+      <div class="nes-container is-rounded with-title themed construction">
+        <p class="title">loading...</p>
+        <p id="loading" class="loading nes-text is-primary"></p>
+      </div>
+    </section>
+    <section class="footer">
+      <a target="_blank" id="btn-github">
+        <i class="nes-icon github is-medium"></i>
+      </a>
+      <a target="_blank" id="btn-linkedin">
+        <i class="nes-icon linkedin is-medium"></i>
+      </a>
+      <a target="_blank" id="btn-twitter">
+        <i class="nes-icon twitter is-medium"></i>
+      </a>
+      <a target="_blank" id="btn-gmail">
+        <i class="nes-icon gmail is-medium"></i>
+      </a>
+      <a target="_blank" id="btn-whatsapp">
+        <i class="nes-icon whatsapp is-medium"></i>
+      </a>
+    </section>
   </body>
 </html>
