@@ -1,13 +1,16 @@
+---
+---
+
 .nes-container.is-rounded.with-title > .title {
   margin-top: -2rem;
 }
 
 body {
   background-color: #fff;
-}
 
-body.is-dark {
-  background-color: #212529;
+  &.is-dark {
+    background-color: #212529;
+  }
 }
 
 p.is-dark {
@@ -40,29 +43,35 @@ p.is-dark {
   margin-top: 15vh;
 }
 
-p.construction {
-  margin: 15vh 0 20px;
+p {
+  &.construction {
+    margin: 15vh 0 20px;
+  }
+
+  &.loading {
+    &::before {
+      content: "▉▉▉▉▉▉▉";
+    }
+
+    &::after {
+      content: "▉";
+      animation: blinker 1.2s cubic-bezier(0, 1, 0, 1) infinite;
+    }
+  }
 }
 
-p.loading::before {
-  content: "▉▉▉▉▉▉▉";
-}
+.construction {
+  &.nes-container {
+    height: 48px;
 
-p.loading::after {
-  content: "▉";
-  animation: blinker 1.2s cubic-bezier(0, 1, 0, 1) infinite;
-}
+    &.is-dark {
+      height: 64px;
+    }
+  }
 
-.construction.nes-container {
-  height: 48px;
-}
-
-.construction > p.title {
-  margin-bottom: 0 !important;
-}
-
-.construction.nes-container.is-dark {
-  height: 64px;
+  > p.title {
+    margin-bottom: 0 !important;
+  }
 }
 
 .footer {
@@ -72,10 +81,10 @@ p.loading::after {
   width: 100%;
   min-width: 324px;
   text-align: center;
-}
 
-.footer button {
-  padding: 0;
+  button {
+    padding: 0;
+  }
 }
 
 @media (min-width: 432px) {
